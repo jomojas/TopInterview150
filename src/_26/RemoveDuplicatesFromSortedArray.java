@@ -30,7 +30,7 @@ class Solution {
                 nums[index] = nums[i];
                 index++;
             }
-            nums[i - 1] = nums[i];
+            // nums[i - 1] = nums[i];
             i++;
         }
         return index;
