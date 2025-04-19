@@ -2,7 +2,7 @@ package _26;
 
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
-        int[] nums = {1};
+        int[] nums = {1, 1, 2, 3, 3, 4, 5, 5, 6};
         Solution solution = new Solution();
         int length = solution.removeDuplicates(nums);
         System.out.println("Length of the array after removing duplicates: " + length);
@@ -23,14 +23,14 @@ class Solution {
         }
 
         int index = 1;
-        int lastNum = nums[0];
+        // int lastNum = nums[0];
         int i = 1;
         while (i != length) {
-            if (lastNum != nums[i]) {
+            if (nums[i - 1] != nums[i]) {
                 nums[index] = nums[i];
                 index++;
             }
-            lastNum = nums[i];
+            nums[i - 1] = nums[i];
             i++;
         }
         return index;
