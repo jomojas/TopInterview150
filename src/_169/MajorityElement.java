@@ -14,7 +14,7 @@ class Solution {
         int count = 0;
         int candidate = 0;
         for (int elem : nums) {
-            /* My method */
+            /* My method(Learned) */
             if (elem == candidate) {
                 count++;
             } else {
