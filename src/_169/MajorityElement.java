@@ -15,20 +15,20 @@ class Solution {
         int candidate = 0;
         for (int elem : nums) {
             /* My method */
-            // if (elem == candidate) {
-            //     count++;
-            // } else {
-            //     if (count == 0) {
-            //         candidate = elem;
-            //     } else {
-            //         count--;
-            //     }
-            // }
-            /* Solution */
-            if (count == 0) {
-                candidate = elem;
+            if (elem == candidate) {
+                count++;
+            } else {
+                if (count == 0) {
+                    candidate = elem;
+                } else {
+                    count--;
+                }
             }
-            count += (elem == candidate) ? 1 : -1;
+            /* Solution */
+            // if (count == 0) {
+            //     candidate = elem;
+            // }
+            // count += (elem == candidate) ? 1 : -1;
         }
          return candidate;
     }
