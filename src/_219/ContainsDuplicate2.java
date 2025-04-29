@@ -15,7 +15,7 @@ public class ContainsDuplicate2 {
 
 class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-        /* My stupid method (Time limit exceeded) */
+        /* My stupid method (Time limit exceeded if not motified) */
         Map<Integer, Integer> map = new HashMap<>();
         int smallerNum = (k >= nums.length) ? nums.length - 1 : k;
         for(int i = 0; i <= smallerNum; i++) {
