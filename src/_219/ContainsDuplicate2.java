@@ -1,6 +1,8 @@
 package _219;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+// import java.util.Set;
 
 public class ContainsDuplicate2 {
     public static void main(String[] args) {
@@ -21,8 +23,9 @@ class Solution {
             map.put(nums[i], i);
         }
         for(int j = k + 1; j < nums.length; j++) {
-            int smallestValue = Collections.min(map.values());
-            map.entrySet().removeIf(entry -> entry.getValue() == smallestValue);
+            // int smallestValue = Collections.min(map.values());
+            // map.entrySet().removeIf(entry -> entry.getValue() == smallestValue);
+            map.remove(nums[j - k - 1]);
             if(map.containsKey(nums[j]))    return true;
             map.put(nums[j], j);
         }
